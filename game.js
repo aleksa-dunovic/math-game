@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const scoreEl = document.getElementById("score");
   const timerEl = document.getElementById("timer");
   const answerDisplay = document.getElementById("answer-display");
-  const skipBtn = document.getElementById("skip-btn");
+  // const skipBtn = document.getElementById("skip-btn");
   const backspaceBtn = document.getElementById("backspace-btn");
   const enterBtn = document.getElementById("enter-btn");
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   backspaceBtn.onclick = backspaceKey;
   enterBtn.onclick = checkAnswer;
-  skipBtn.onclick = nextQuestion;
+  // skipBtn.onclick = nextQuestion;
 
   startBtn.onclick = () => {
     startScreen.classList.add("hidden");  // hide start
@@ -117,12 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (attempts < 2) {
       // allow retry
       input = "";
+      document.getElementById("attempt-message").textContent = "One attempt left!";
       setTimeout(() => {
         answerDisplay.textContent = "";
         answerDisplay.className = "";
       }, 400);
     } else {
       // move on after 2nd fail
+      document.getElementById("attempt-message").textContent = ""; // clear message after 2nd fail
       setTimeout(nextQuestion, 400);
     }
   }
