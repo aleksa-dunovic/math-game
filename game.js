@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ----- Game variables -----
   let score = 0;
-  let timeLeft = 300;
+  let timeLeft = 120;
   let currentAnswer = null;
   let input = "";
   let attempts = 0;
@@ -127,3 +127,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
