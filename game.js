@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----- Game functions -----
   function startGame() {
     score = 0;
-    timeLeft = 300;
+    timeLeft = 120;
     updateScore();
     updateTimer();
     startTimer();
@@ -127,4 +127,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
 
