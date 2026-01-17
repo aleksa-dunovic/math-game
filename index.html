@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+  <title>Math Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Start screen -->
+  <div id="start-screen">
+    <button id="start-btn">Start</button>
+  </div>
+
+  <!-- Game screen -->
+  <div id="game-screen" class="hidden">
+    <div id="timer">05:00</div>
+    <div id="score">0</div>
+    <div id="question">3 × 4</div>
+    <div id="answer-display"></div>
+
+    <div id="bottom-controls">
+      <div id="keyboard">
+        <!-- Row 1 -->
+        <button class="num-btn">1</button>
+        <button class="num-btn">2</button>
+        <button class="num-btn">3</button>
+
+        <!-- Row 2 -->
+        <button class="num-btn">4</button>
+        <button class="num-btn">5</button>
+        <button class="num-btn">6</button>
+
+        <!-- Row 3 -->
+        <button class="num-btn">7</button>
+        <button class="num-btn">8</button>
+        <button class="num-btn">9</button>
+
+        <!-- Row 4 -->
+        <button id="backspace-btn">⌫</button>
+        <button class="num-btn">0</button>
+        <button id="enter-btn">Enter</button>
+      </div>
+        <div id="skip-container">
+          <button id="skip-btn">Skip</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

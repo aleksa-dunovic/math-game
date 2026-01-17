@@ -1,0 +1,148 @@
+/* -------------------------
+   General Page Styles
+------------------------- */
+html,body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  /* disables scrolling */
+  touch-action: none; /* disables default touch behaviors like swipe scrolling */
+  height: 100%;
+  width: 100%;
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
+
+/* -------------------------
+   Start Screen
+------------------------- */
+#start-btn {
+  font-size: 48px;        /* big text */
+  padding: 35px 60px;     /* huge tappable area */
+  border-radius: 16px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  margin-top: 40vh;       /* roughly center vertically */
+}
+
+/* -------------------------
+   Question / Answer Display
+------------------------- */
+#question {
+  font-size: 10vw;
+  margin: 20px 0;
+  font-weight: bold;
+
+}
+
+#score {
+  font-size: 6vw;       /* slightly smaller than timer */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#timer {
+  font-size: 6vw;       /* responsive font size relative to screen width */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#answer-display {
+  font-size: 10vw;             /* big font for mobile */
+  height: 80px;                /* fixed height prevents box from growing */
+  border-bottom: 3px solid black;
+  margin-bottom: 20px;
+  padding: 0 10px;             /* horizontal padding */
+  box-sizing: border-box;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;            /* prevents keyboard from being pushed */
+}
+
+
+
+
+/* Correct / Wrong Feedback */
+.correct { color: green; }
+.wrong { color: red; }
+
+.flash {
+  animation: flash 0.3s;
+}
+
+@keyframes flash {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+
+/* -------------------------
+   Numeric Keyboard Grid
+------------------------- */
+/* Bottom controls container */
+#bottom-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 0;
+  box-sizing: border-box;
+  background: #f0f0f0;
+}
+
+/* Keypad grid */
+#keyboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 8px;                             /* spacing between buttons */
+  width: 95%;                             /* almost full screen width */
+  margin: 0 auto 10px auto;              /* center grid */
+}
+
+#keyboard button {
+  width: 100%;                            /* fill the grid cell */
+  height: 60px;                           /* fixed height, not based on width */
+  font-size: 6vw;                         /* scales with screen width */
+  border-radius: 12px;
+}
+
+
+/* Skip button below keypad */
+#skip-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 5px auto 15px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#skip-btn {
+  background: #f9a825;
+  color: white;
+  font-size: 5vw;
+  padding: 12px 20px;
+  border-radius: 12px;
+  width: 50%;
+}
+
+#enter-btn {
+  background: #4CBB17;
+  color: white;
+}
+
+#backspace-btn{
+  background: #D22B2B;
+  color: white;
+}
